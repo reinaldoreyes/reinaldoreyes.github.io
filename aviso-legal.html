@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Paraíso | Estadía</title>
+    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/es.js"></script>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AdiMxk6Re5Q7CxblxbUfaxIHqHpKJaUYDfMTmSfBWBg4YE0X71SO2dj3GI5pRdZYiQJdgsQYkcmr7T6n&currency=USD&components=buttons"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a id="home-link" class="active home">Inicio</a>
+                <a id="about-link">Acerca de</a>
+                <a id="reservas-link">Reservas</a>
+                <a id="contact-link">Contacto</a>
+                <a id="legal-link">Aviso legal</a>
+            </nav>
+        </header>
+        <div class="container-body">
+            <div class="about section" id="about">
+                <div class="left-forged">
+                    <img src="resources/images/divider.png" alt="">
+                </div>
+                <div class="content">
+                    <h1>Acerca de <i class="script">Casa Paraíso</i></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Somos una casa de hospedaje que se dedica a brindar un servicio con calidad y calidez a nuestros huéspedes.</p>
+                    <br>
+                    <br>
+                    <figure>
+                        <img src="resources/images/about-1.jpg" alt="">
+                    </figure>
+                    <br>
+                    <br>
+                    <p>&nbsp;&nbsp;Nos encontramos en una ubicación privilegiada, rodeados de naturaleza y tranquilidad, ideal para desconectar del estrés diario y disfrutar de un ambiente relajado. Nuestra casa está equipada con todas las comodidades necesarias para que te sientas como en tu propio hogar.</p>
+                    <br>
+                    <br>
+                    <div class="slideshow-container" data-index="0">
+                        <figure class="slideshow">
+                          <img src="resources/images/slider-1.jpg" alt="">
+                          <img src="resources/images/slider-2.jpg" alt="">
+                          <img src="resources/images/slider-3.jpg" alt="">
+                          <img src="resources/images/slider-4.jpg" alt="">
+                          <img src="resources/images/slider-5.jpg" alt="">
+                          <img src="resources/images/slider-1.jpg" alt="">
+                          <img src="resources/images/slider-2.jpg" alt="">
+                          <img src="resources/images/slider-3.jpg" alt="">
+                          <img src="resources/images/slider-4.jpg" alt="">
+                          <img src="resources/images/slider-5.jpg" alt="">
+                        </figure>
+                        <div class="prev-image">
+                          <i class="fa-solid fa-circle-chevron-left"></i>
+                        </div>
+                        <div class="next-image">
+                          <i class="fa-solid fa-circle-chevron-right"></i>
+                        </div>
+                        <div class="controls visible">
+                          <img class="active" src="resources/images/slider-1-th.jpg" alt="">
+                          <img src="resources/images/slider-2-th.jpg" alt="">
+                          <img src="resources/images/slider-3-th.jpg" alt="">
+                          <img src="resources/images/slider-4-th.jpg" alt="">
+                          <img src="resources/images/slider-5-th.jpg" alt="">
+                          <img src="resources/images/slider-1-th.jpg" alt="">
+                          <img src="resources/images/slider-2-th.jpg" alt="">
+                          <img src="resources/images/slider-3-th.jpg" alt="">
+                          <img src="resources/images/slider-4-th.jpg" alt="">
+                          <img src="resources/images/slider-5-th.jpg" alt="">
+                        </div>
+                        <div class="scroll-left-controls visible">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="scroll-right-controls visible">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    
+                    <br>
+                    <br>
+                    <p>&nbsp;&nbsp;En Casa Paraíso, nos esforzamos por crear una experiencia única para cada uno de nuestros huéspedes. Desde el momento en que llegas, te recibimos con una cálida bienvenida y nos aseguramos de que tengas todo lo que necesitas para una estancia placentera. Nuestro personal está siempre disponible para ayudarte y hacer que tu visita sea inolvidable.</p>
+                    <br>
+                    <br>
+                        <figure>
+                            <img src="resources/images/about-2.jpg" alt="">
+                        </figure>
+                    <br>
+                    <br>
+                    <p>&nbsp;&nbsp;Además, promovemos un estilo de vida saludable y activo, ofreciendo diversas actividades al aire libre y programas de bienestar. Ya sea que desees relajarte en nuestro jardín, participar en una clase de yoga, o explorar los alrededores, en Casa Paraíso encontrarás la actividad perfecta para ti.</p>
+                    <br>
+                    <br>
+                    <h4>&nbsp;&nbsp;Ofrecemos servicios como:</h4>
+                    <br>
+                    <ul>
+                        <li>Alimentación balanceada</li>
+                        <li>Actividades recreativas</li>
+                        <li>Atención personalizada</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <hr>
+                    <br>
+                    <br>
+                    <p>&nbsp;&nbsp;¡Ven a hacer parte de nuestra familia por un tiempo!</p>
+                    <br>
+                    <br>
+                    <p>&nbsp;&nbsp;<i>¿Quieres un lugar tranquilo para pasar unos días o más?</i></p>
+                    <br>
+                    <p>&nbsp;&nbsp;<i>¿Necesitas donde recuperarte de un procedimiento quirúrgico y que alguien te cuide y te acompañe?</i></p>
+                    <br>
+                    <p>&nbsp;&nbsp;<i>¿Quieres un lugar donde puedas disfrutar de la naturaleza?</i></p>
+                    <br>
+                    <p>&nbsp;&nbsp;¡Este es el lugar perfecto para ti!</p>
+                    <br>
+                    <br>
+                    <p>Reserva ahora tu estadía en Casa Paraíso:</p>
+                    <br>
+                    <a class="hipervinculo" id="abrir-calendario"><i class="fa-regular fa-calendar-days"></i> Abrir calendario de reservas</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="right-forged">
+                    <img src="resources/images/divider.png" alt="">
+                </div>
+            </div>
+            <div class="reservation section" id="reservas">
+                <div class="modal terms-reservation">
+                    <div class="modal-header">
+                        <h2>Términos y condiciones</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lee esto atentamente. Al reservar, aceptas adherirte a estos términos:</p>
+                        <div class="terms">
+                            <p>1. La reserva se hace efectiva con el pago del 50% (<span id="price-of-reserve"></span>) del valor total de la estadía.</p>
+                            <p>2. El 50% restante se debe pagar al momento de la llegada.</p>
+                            <p>3. No está permitido fumar dentro de la casa.</p>
+                            <p>4. No se permiten mascotas.</p>
+                            <p>5. No se permite el ingreso de personas ajenas a la reserva.</p>
+                            <p>6. De las 8:40 de la noche hasta las 6:00 de la mañana, se debe respetar el silencio.</p>
+                            <p>7. El consumo de alcohol está permitido, pero con moderación.</p>
+                            <p>8. No se permite el consumo de drogas.</p>
+                            <p>9. Todos los huéspedes deben tener cuidado de su higiene personal.</p>
+                            <p>10. Cada huésped es responsable por el aseo de su habitación.</p>
+                            <p>11. Se debe ser respetuoso con los otros huéspedes y con el personal de Casa Paraíso.</p>
+                        </div>
+                        <div class="accept-terms-container">
+                                <label>
+                                    <input type="checkbox" id="accept-terms" autocomplete="off">
+                                    Acepto los términos y condiciones
+                                </label>
+                        </div>
+                        <div class="buttons">
+                            <button class="pay-reserve">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal print-reservation">
+                    <div class="modal-header">
+                        <h2>Imprime la reserva</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>¡No olvides imprimir tu reserva!, también te la enviamos al correo electrónico y por Whatsapp.</p>
+                        <div class="preview">
+                            <div>
+                                <i>Estadía Casa Paraíso</i>
+                                <br>
+                                <small>NIT: 1234567890</small>
+                                <small>Celular: 312 345 6789</small>
+                                <br>
+                                <figure>
+                                    <img src="/resources/images/factura_qr.png" alt="">
+                                </figure>
+                                <br>
+                                <p>Número de reserva:</p>
+                                <p id="numeroReservaPreview"><b>2F729Rc89i</b></p>
+                                <p>Reserva para:</p>
+                                <p id="nombreReservaPreview"></p>
+                                <p>Documento de identidad:</p>
+                                <p id="documentoReservaPreview"></p>
+                                <p>Número de celular:</p>
+                                <p id="celularReservaPreview"></p>
+                                <p>Correo electrónico:</p>
+                                <p id="correoReservaPreview"></p>
+                                <p>Fecha de entrada:</p>
+                                <p id="fechaEntradaPreview"></p>
+                                <p>Fecha de salida:</p>
+                                <p id="fechaSalidaPreview"></p>
+                                <p>Habitación:</p>
+                                <p id="habitacionPreview"></p>
+                                <p>Total a pagar:</p>
+                                <p id="totalPreview"></p>
+                                <p>Pagado:</p>
+                                <p id="payedPreview"></p>
+                                <p>Por pagar:</p>
+                                <p id="toPayPreview"></p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="print-reserve">Imprimir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal data-reservation">
+                    <div class="modal-header">
+                        <h2>Datos de la reserva</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿A nombre de quién vas a hacer la reserva?</p>
+                        <input placeholder="Nombres y apellidos" type="text" id="nombreReserva" autocomplete="off">
+                        <input placeholder="Documento de identidad" type="text" id="documentoReserva" autocomplete="off">
+                        <input placeholder="Número de celular" type="text" id="celularReserva" autocomplete="off">
+                        <input placeholder="Correo electrónico" type="email" id="correoReserva" autocomplete="off">
+                        <div class="buttons">
+                            <button class="terms-reserve">Continuar con la reserva</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal pay-reservation">
+                    <div class="modal-header">
+                        <h2>Paga tu reserva</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div id="paypal-button-container" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="modal create-reservation">
+                    <div class="modal-header">
+                        <h2>Hacer una reserva</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="reservation-date">
+                            <label for="reservationStart">
+                                Entrada (Check-in)
+                                <input type="text" id="reservationStart" class="date-reservation" placeholder="Selecciona una fecha">
+                            </label>
+                            <label class="reservationEnd">
+                                Salida (Check-out)
+                                <input type="text" id="reservationEnd" class="date-reservation" placeholder="Selecciona una fecha">
+                            </label>
+                        </div>
+                        <br>
+                        <div class="rooms">
+                            <label for="roomType">
+                                Seleccione una de las habitaciones disponibles para esta fecha
+                                <select name="roomType" id="roomType" autocomplete="off">
+                                    <option value="0" disabled hidden selected>Seleccionar</option>
+                                    <option value="1">Habitación 1</option>
+                                    <option value="2">Habitación 2</option>
+                                    <option value="3">Habitación 3</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="total">
+                            <label for="total">
+                                Total a pagar
+                                <input type="text" id="total" value="$ 0" readonly autocomplete="off">
+                            </label>
+                        </div>
+                        <div class="buttons">
+                            <button class="reserve">Continuar con la reserva</button>
+                        </div>
+                    </div>
+                </div>
+                <div id='calendar'></div>
+            </div>
+            <div class="contact section" id="contact">
+                <div class="modal instagram-contact">
+                    <div class="modal-header">
+                        <h2>Contáctanos por <i class="fa-brands fa-instagram"></i> Instagram</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>Encuéntranos en Instagram como <a href="https://instagram.com/casaparaiso" target="_blank" class="hipervinculo">@CasaParaiso</a></p>
+                        <br>
+                        <p>O escanea este código QR con la cámara de Instagram o la de tu celular:</p>
+                        <img src="resources/images/a.k.a._dizzy_qr.png" alt="Código QR para acceder a la cuenta de Instagram de Casa Paraíso">
+                    </div>
+                </div>
+                <div class="modal whatsapp-contact">
+                    <div class="modal-header">
+                        <h2>Contáctanos por <i class="fa-brands fa-whatsapp"></i> Whatsapp</h2>
+                        <div class="close">
+                            <i class="fa-solid fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nuestro número de Whatsapp es <a href="https://web.whatsapp.com" target="_blank" class="hipervinculo"><i class="fa-brands fa-whatsapp"></i> 312 345 6789</a></p>
+                        <br>
+                        <p>O escanea este código QR con la cámara de tu celular:</p>
+                        <img src="resources/images/whatsapp_qr.PNG" alt="Código QR para acceder al chat de Whatsapp de Casa Paraíso">
+                    </div>
+                </div>
+                <div class="social-contact">
+                    <p>Contáctanos por <a id="open-whatsapp-modal" class="hipervinculo"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></p>
+                    <p>Contáctanos por <a id="open-instagram-modal" class="hipervinculo"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                </div>
+                <div class="send-message">
+                    <fieldset>
+                        <legend>O contáctanos directamente desde aquí</legend>
+                        <input type="text" autocomplete="off"id="name" name="name" placeholder="Danos tu nombre">
+                        <textarea name="message" autocomplete="off"id="message" cols="30" rows="6" placeholder="Escribe tu mensaje"></textarea>
+                        <p>¿Cómo quieres que te devolvamos el mensaje?</p>
+                        <div class="optionsForAnswer">
+                            <label for="email">
+                                <input type="radio" autocomplete="off" name="answer" id="email" value="email">
+                                Por correo electrónico
+                            </label>
+                            <label for="phone">
+                                <input type="radio" autocomplete="off" name="answer" id="phone" value="phone">
+                                Por teléfono
+                            </label>
+                        </div>
+                        <div class="optionsForPhone">
+                            <label for="call">
+                                <input type="radio" autocomplete="off" name="answerPhone" id="call" value="call">
+                                Por llamada
+                            </label>
+                            <label for="whatsapp">
+                                <input type="radio" autocomplete="off" name="answerPhone" id="whatsapp" value="whatsapp">
+                                Al Whatsapp
+                            </label>
+                        </div>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Ingresa tu número de teléfono">
+                        <input type="text" id="emailAddress" name="emailAddress" placeholder="Ingresa tu correo electrónico">
+                        <div class="buttons">
+                            <button id="send-button">Enviar mensaje</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="legal section" id="legal">
+                <h1>Aviso legal</h1>
+                <br>
+                <br>
+                <p>Casa Paraíso es una empresa legalmente constituida y registrada en la Cámara de Comercio de Medellín, bajo el NIT 1234567890.</p>
+                <br>
+                <p>Estamos ubicados en la vereda Ojo de Agua, en el municipio de Rionegro, Antioquia, Colombia; en la Calle 123 # 456B - 78.</p>
+                <br>
+                <p>La responsable legal es la señorita Patricia Dávila, su número de contacto es el 312 345 6789, y su correo electrónico es <a href="mailto:patriciadavila@casaparaiso.com.co" class="hipervinculo">patriciadavila@casaparaiso.com.co</a>.</p> 
+                <br> 
+                <p>Los datos personales que nos proporciones serán utilizados únicamente para fines de contacto y reserva, y no serán compartidos con terceros.</p>
+                <br>
+                <p>No guardamos información de pago, todos los pagos se realizan a través de la plataforma de Paypal.</p>
+                <br>
+                <p>En caso de cancelación de la reserva, se aplicarán las políticas de cancelación establecidas en el momento de la reserva.</p>
+                <br>
+                <p>Para más información, contáctanos a través de los medios disponibles en la sección de contacto.</p>
+                <br>
+                <br>
+                <p>© 2025 Casa Paraíso. Todos los derechos reservados.</p>
+                
+            </div>
+        </div>
+    </div>
+    <video class="background" src="resources/videos/background-video.mp4" autoplay loop muted></video>
+    <div class="background-container">
+        <img src="resources/images/logo-casa-paraiso.png" alt="Logo de Casa Paraíso">
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
