@@ -1,4 +1,7 @@
+
+document.addEventListener("DOMContentLoaded", function(){
 //Efecto de desenfoque al hacer scroll
+
 
 const body= document.querySelector("body");
 const html= document.querySelector("html");
@@ -29,7 +32,6 @@ let routesInverse= {
     '/contacto': 'contact',
     '/aviso-legal': 'legal',
 }
-
 let roomPrices= {
     1: 40,
     2: 48,
@@ -476,6 +478,10 @@ links.forEach(link=> {
         }
     });
 });
+if(!(window.location.pathname== "/" || window.location.pathname== "" || window.location.pathname== "/index.html")){
+    let section= window.location.pathname.replace(".html", "");
+    document.querySelector(`nav a#${routesInverse[section]}-link`).click();
+}
 //Auto scroll del contenido para mayor visibilidad
 function autoScrollHeaderTop(){
     container.querySelector("header").scrollIntoView({ "behavior": "smooth", inline: "center", block: "start" }) 
@@ -490,7 +496,7 @@ function autoScrollHeaderBottom(mode){
     container.querySelector("header nav").scrollIntoView({ "behavior": "smooth", inline: "center", block: "end" }) 
 }
 
-autoScrollHeaderBottom("abrupt")
+if(["/", ""].includes(window.location.pathname))autoScrollHeaderBottom("abrupt")
 
 document.querySelector(".container-body").addEventListener("scroll", function(){
     autoScrollHeaderTop()
@@ -708,10 +714,5 @@ const abrirCalendario= document.querySelector("#abrir-calendario")
 abrirCalendario.addEventListener("click", function(){
     document.querySelector("#reservas-link").click();
 });
-
-window.addEventListener("load", function(){
-    if(!(window.location.pathname== "/" || window.location.pathname== "" || window.location.pathname== "/index.html")){
-        let section= window.location.pathname.replace(".html", "");
-        document.querySelector(`nav a#${routesInverse[section]}-link`).click();
-    }
 })
+
