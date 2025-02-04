@@ -59,14 +59,14 @@ window.addEventListener("scroll", ()=> {
             document.querySelector(`nav a#${previousSection.id}-link`).classList.add("active");
             document.querySelector(".section.active")?.classList.remove("active");
             previousSection.classList.add("active");
-            history.pushState(null, "", `/${routes[previousSection.id]}`);
+            history.pushState({page: 1}, "", `/${routes[previousSection.id]}`);
         }
     }else{
         previousSection= document.querySelector(".section.active")?? previousSection;
         previousSection.classList.remove("active");
         document.querySelector("nav a.active").classList.remove("active");
         document.querySelector("nav a#home-link").classList.add("active");
-        history.pushState(null, "", `/${routes["home"]}`);
+        history.pushState({page: 1}, "", `/${routes["home"]}`);
     }
     if(document.documentElement.scrollTop == document.documentElement.scrollHeight - document.documentElement.clientHeight){
         if(!background.paused)background.pause();
@@ -87,7 +87,7 @@ links.forEach(link=> {
         document.querySelector("nav a.active").classList.remove("active");
         this.classList.add("active")
         section?.classList.add("active");
-        history.pushState(null, "", `/${routes[this.id.replace("-link", "")]}`);
+        history.pushState({page: 1}, "", `/${routes[this.id.replace("-link", "")]}`);
         if(this.id=="home-link"){
             autoScrollHeaderBottom()
         }else{
