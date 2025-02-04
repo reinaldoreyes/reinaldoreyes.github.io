@@ -352,9 +352,7 @@ links.forEach(link=> {
             closeTermsReservationModal.addEventListener("click", function(){
                 termsReservationModal.classList.remove("visible");
             })
-            closeReservationModal.addEventListener("click", function(){
-                reservationModal.classList.remove("visible");
-            })
+        
             const termsReserveButton= document.querySelector(".terms-reserve");
 
             termsReserveButton.addEventListener('click', function() {
