@@ -1,112 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Raleway, sans-serif;
 }
-.background{
+
+.background {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     position: fixed;
+    transform: scale(1.1);
     top: 0;
 }
-.script{
+
+.script {
     font-family: "Meow Script", cursive;
     font-size: 2em;
 }
-.background-container{
+
+.background-container {
     width: 100%;
     height: calc(100vh - 49px);
     display: grid;
     place-content: center;
     position: fixed;
     top: 0;
-    & img{
+
+    & img {
         height: 500px;
         max-height: calc(100vh - 80px);
     }
 }
-.hipervinculo{
+
+.hipervinculo {
     color: rgb(39, 39, 223);
     text-decoration: underline;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         color: rgb(6, 6, 143);
     }
 }
+
 .fc .fc-highlight {
     background-color: rgba(18, 37, 206, 0.329) !important;
 }
-#calendar{
+
+#calendar {
     user-select: none;
 }
-.fc-daygrid-event-harness{
+
+.fc-daygrid-event-harness {
     pointer-events: none;
 }
-.container{
+
+.container {
     position: relative;
     z-index: 1;
     padding-top: calc(100vh - 45px);
+
     & header {
         border-bottom: 4px double rgb(201, 185, 99);
         background: white;
-        & nav{
+
+        & nav {
             height: 45px;
             background-color: rgb(255, 255, 255);
             width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            & a{
+
+            & a {
                 text-decoration: none;
                 color: rgb(56, 56, 56);
                 font-size: 1.2rem;
                 font-weight: 500;
                 cursor: pointer;
                 user-select: none;
-                &:hover, &.active{
+
+                &:hover,
+                &.active {
                     color: rgb(201, 185, 99);
                     text-decoration: underline;
                 }
             }
         }
     }
-    & .container-body{
+
+    & .container-body {
         height: calc(100vh - 49px);
         width: 100%;
         background: white;
         overflow-y: auto;
-        display: flex; 
-        & .section{
+        display: flex;
+
+        & .section {
             display: none;
-            &.active{
+
+            &.active {
                 display: block;
             }
         }
-        & .about.section.active{
+
+        & .about.section.active {
             display: flex;
             width: 100%;
-            align-items: center;
-            & .left-forged, .right-forged{
+            align-items: stretch;
+
+            & .left-forged,
+            .right-forged {
                 flex-grow: 1;
-                margin-top: 73em;
+                margin-top: 32em;
             }
-            & .right-forged{
+
+            & .right-forged {
                 transform: scaleX(-1);
             }
-            & .content{
+
+            & .content {
                 width: 76%;
                 height: 100%;
                 flex-shrink: 0;
                 padding: 5em 0;
                 color: #313131;
-                & > figure{
+                font-size: 1.3em;
+
+                & #abrir-calendario+div {
+                    height: 4em;
+                    width: 100%;
+                }
+
+                &>figure {
                     width: 100%;
                     height: 15em;
-                    display: flex; 
+                    display: flex;
                     justify-content: center;
-                    & img{
+
+                    & img {
                         padding: 5px;
                         border: 3px solid rgb(170, 167, 129);
                         width: auto;
@@ -114,9 +148,11 @@
                         object-fit: contain;
                     }
                 }
-                & ul li{
+
+                & ul li {
                     list-style: circle;
                 }
+
                 & .slideshow-container {
                     max-width: 100%;
                     max-height: 80vh;
@@ -126,13 +162,14 @@
                     padding: 5px;
                     padding-bottom: 114px;
                     border: 3px solid rgb(170, 167, 129);
+
                     & figure {
                         margin: 0;
                         display: flex;
                         width: 100%;
                         height: 100%;
                         overflow: hidden;
-                    
+
                         & img {
                             min-width: 100%;
                             min-height: 100%;
@@ -142,30 +179,36 @@
                             object-fit: cover;
                         }
                     }
+
                     & .prev-image {
-                      left: 11px;
+                        left: 11px;
                     }
+
                     & .next-image {
-                      right: 11px;
+                        right: 11px;
                     }
+
                     & .next-image,
                     & .prev-image {
-                      position: absolute;
-                      z-index: 1;
-                      top: calc((100% - 114px) / 2);
-                      transform: translateY(-50%);
-                      color: rgb(223, 222, 218);
-                      box-shadow: 0 0 4px black;
-                      cursor: pointer;
-                      border-radius: 50%;
-                      display: flex;
-                      overflow: hidden;
-                      &:hover{
-                        color: whitesmoke;
-                      }
+                        position: absolute;
+                        z-index: 1;
+                        top: calc((100% - 114px) / 2);
+                        transform: translateY(-50%);
+                        color: rgb(152, 152, 151);
+                        box-shadow: 0 0 4px black;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        display: flex;
+                        overflow: hidden;
+
+                        &:hover {
+                            color: whitesmoke;
+                        }
                     }
-                  }
-                  & .scroll-left-controls, & .scroll-right-controls  {
+                }
+
+                & .scroll-left-controls,
+                & .scroll-right-controls {
                     position: absolute;
                     bottom: 2px;
                     height: 112px;
@@ -175,20 +218,24 @@
                     transition: 0.8s opacity ease-out;
                     display: grid;
                     place-content: center;
-                    & i{
+
+                    & i {
                         color: grey;
                     }
-                    }
-                  & .scroll-left-controls{
+                }
+
+                & .scroll-left-controls {
                     left: 5px;
                     box-shadow: 6px 0 6px #dbdbc656;
-                  }
-                  & .scroll-right-controls {
+                }
+
+                & .scroll-right-controls {
                     right: 5px;
                     box-shadow: -6px 0 6px #dbdbc656;
-                
-                  }
-                  & .controls {
+
+                }
+
+                & .controls {
                     display: flex;
                     position: absolute;
                     bottom: 2px;
@@ -199,29 +246,52 @@
                     padding: 2px 0;
                     box-shadow: 0px -5px 5px #cfcfcf45;
                     background: #cfcfcf45;
+
                     & img {
-                      height: 108px;
-                      border: 1px solid transparent;
-                      cursor: pointer;
-                      &.active{
-                        border: 2px solid rgb(170, 167, 129);
-                        padding: 1px;
-                      }
+                        height: 108px;
+                        border: 1px solid transparent;
+                        cursor: pointer;
+
+                        &.active {
+                            border: 2px solid rgb(170, 167, 129);
+                            padding: 1px;
+                        }
                     }
-                    
+
                 }
             }
         }
-        & .reservation.section.active{
+
+        & .reservation.section.active {
             width: 100%;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            & .cart {
+                height: 100px;
+                flex-shrink: 0;
+                display: flex;
+                & .dates{
+                    flex-grow: 1;
+                }
+                & .cart-total{
+                    width: max-content;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                }
+            }
+
             & #calendar {
+                flex-shrink: 1;
                 width: 100%;
+                height: calc(100% - 100px);
                 max-width: 100vw;
-                height: calc(100vh - 100px);
                 margin: auto;
             }
-            & .modal.pay-reservation{
+
+            & .modal.pay-reservation {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -232,31 +302,37 @@
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 2em 10px;
                     flex-grow: 1;
                     border: 1px solid rgb(201, 185, 99);
@@ -268,7 +344,8 @@
                     max-height: calc(100vh - 300px);
                 }
             }
-            & .modal.terms-reservation{
+
+            & .modal.terms-reservation {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -279,31 +356,37 @@
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 2em 10px;
                     flex-grow: 1;
                     border: 1px solid rgb(201, 185, 99);
@@ -313,33 +396,41 @@
                     font-size: 1.2rem;
                     overflow-y: auto;
                     max-height: calc(100vh - 140px);
-                    & > p{
+
+                    &>p {
                         margin-bottom: 1.7em;
                     }
-                    & .terms{
+
+                    & .terms {
                         flex-grow: 1;
                         flex-shrink: 1;
                         height: 250px;
                         overflow-y: auto;
-                        & p{
-                            margin-bottom: 0.5em;;
+
+                        & p {
+                            margin-bottom: 0.5em;
+                            ;
                         }
                     }
-                    & .accept-terms-container{
+
+                    & .accept-terms-container {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         margin-top: 1em;
-                        & label{
+
+                        & label {
                             margin-right: 0.5em;
                             user-select: none;
                         }
                     }
-                    & .buttons{
+
+                    & .buttons {
                         display: flex;
                         margin-top: 2em;
                         justify-content: center;
-                        & button{
+
+                        & button {
                             cursor: pointer;
                             padding: 9px;
                             font-size: 1.6rem;
@@ -351,7 +442,8 @@
                     }
                 }
             }
-            & .modal.print-reservation{
+
+            & .modal.print-reservation {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -362,31 +454,37 @@
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 1em 10px;
                     flex-grow: 1;
                     display: flex;
@@ -398,42 +496,52 @@
                     font-size: 1.2rem;
                     overflow-y: auto;
                     max-height: calc(100vh - 140px);
-                    & p{
+
+                    & p {
                         margin-bottom: 0.7em;
                     }
-                    & .preview{
+
+                    & .preview {
                         flex-grow: 1;
                         flex-shrink: 1;
                         height: 300px;
                         overflow-y: auto;
-                        & > div{
+
+                        &>div {
                             border: 3px double black;
                             padding: 0.2em;
-                            & i, & small{
+
+                            & i,
+                            & small {
                                 display: block;
                                 text-align: center;
                             }
-                            & figure{
+
+                            & figure {
                                 display: flex;
                                 justify-content: center;
-                                & img{
+
+                                & img {
                                     width: 80%;
                                     height: auto;
                                 }
-                           
+
                             }
                         }
                     }
-                    & input{
+
+                    & input {
                         font-size: 21px;
                         margin-top: 0.6em;
                         padding: 0.3em;
                     }
-                    & .buttons{
+
+                    & .buttons {
                         display: flex;
                         margin-top: 2em;
                         justify-content: center;
-                        & button{
+
+                        & button {
                             cursor: pointer;
                             padding: 9px;
                             font-size: 1.6rem;
@@ -445,7 +553,8 @@
                     }
                 }
             }
-            & .modal.data-reservation{
+
+            & .modal.data-reservation {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -456,31 +565,37 @@
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 1em 10px;
                     flex-grow: 1;
                     display: flex;
@@ -493,19 +608,23 @@
                     font-size: 1.2rem;
                     overflow-y: auto;
                     max-height: calc(100vh - 100px);
-                    & p{
+
+                    & p {
                         margin-bottom: 0.7em;
                     }
-                    & input{
+
+                    & input {
                         font-size: 21px;
                         margin-top: 0.6em;
                         padding: 0.3em;
                     }
-                    & .buttons{
+
+                    & .buttons {
                         display: flex;
                         margin-top: 2em;
                         justify-content: center;
-                        & button{
+
+                        & button {
                             cursor: pointer;
                             padding: 9px;
                             font-size: 1.6rem;
@@ -517,7 +636,8 @@
                     }
                 }
             }
-            & .modal.create-reservation{
+
+            & .modal.create-reservation {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -525,35 +645,46 @@
                 transform: translate(-50%, -50%);
                 flex-direction: column;
                 display: none;
-        
+
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                & .reservation-info {
+                    text-align: center;
+                    margin-bottom: 1em;
+                }
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 2em 10px;
                     flex-grow: 1;
                     border: 1px solid rgb(201, 185, 99);
@@ -561,47 +692,53 @@
                     color: #313131;
 
                     font-size: 1.2rem;
-                    & label{
+
+                    & label {
                         display: inline-flex;
                         flex-direction: column;
                         flex-shrink: 1;
-                        & input, & select{
+
+                        & input,
+                        & select {
                             margin-top: 4px;
                         }
                     }
-                    & .reservation-date{
+
+                    & .reservation-time {
                         display: flex;
                         justify-content: center;
-                        & input{
-                            font-size: 21px
-                        }
-                        & > :first-child{
-                            margin-right: 10px;
-                        }
-                        & >  :last-child{
-                            margin-left: 10px;
-                        }
-                    }
-                    & .rooms{
-                        display: flex;
-                        justify-content: center;
-                        & select{
+
+                        & select {
                             font-size: 21px;
                         }
                     }
-                    & .total{
+
+                    & .rooms {
+                        display: flex;
+                        justify-content: center;
+
+                        & select {
+                            font-size: 21px;
+                        }
+                    }
+
+                    & .total {
                         display: flex;
                         margin-top: 1em;
+                        flex-direction: column;
                         justify-content: center;
-                        & input{
+
+                        & input {
                             font-size: 21px;
                         }
                     }
-                    & .buttons{
+
+                    & .buttons {
                         display: flex;
                         margin-top: 2em;
                         justify-content: center;
-                        & button{
+
+                        & button {
                             cursor: pointer;
                             padding: 9px;
                             font-size: 1.6rem;
@@ -615,18 +752,22 @@
                 }
             }
         }
-        & .legal.section.active{
+
+        & .legal.section.active {
             padding: 2em;
             width: 100%;
             height: 100%;
         }
-        & .contact.section.active{
+
+        & .contact.section.active {
             padding: 2em;
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
-            & .modal.instagram-contact, & .modal.whatsapp-contact{
+
+            & .modal.instagram-contact,
+            & .modal.whatsapp-contact {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -634,35 +775,41 @@
                 transform: translate(-50%, -50%);
                 flex-direction: column;
                 display: none;
-        
+
                 width: 700px;
                 max-width: 100%;
                 background: whitesmoke;
-                &.visible{
+
+                &.visible {
                     display: flex;
                 }
-                & .modal-header{
+
+                & .modal-header {
                     background: rgb(201, 185, 99);
                     color: white;
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    & h2{
+
+                    & h2 {
                         font-size: 1.5rem;
                     }
-                    & .close{
+
+                    & .close {
                         cursor: pointer;
                         font-size: 1.3rem;
                         padding: 5px;
                         display: grid;
                         place-content: center;
-                        &:hover i{
+
+                        &:hover i {
                             color: rgb(102, 102, 102);
                         }
                     }
                 }
-                & .modal-body{
+
+                & .modal-body {
                     padding: 2em 10px;
                     flex-grow: 1;
                     border: 1px solid rgb(201, 185, 99);
@@ -670,82 +817,103 @@
                     color: #313131;
                     text-align: center;
                     font-size: 1.2rem;
-                    & img{
+
+                    & img {
                         width: 50%;
                         height: auto;
                         margin: 1em 0;
                     }
                 }
             }
-            & .social-contact{
-                line-height: 1.8em;;
+
+            & .social-contact {
+                line-height: 1.8em;
+                ;
                 font-size: 1rem;
             }
-            & .send-message{
+
+            & .send-message {
                 width: 100%;
                 border-top: 4px dashed rgb(201, 185, 99);
                 margin-top: 1em;
                 flex-grow: 1;
                 padding: 1em 0;
-                & fieldset{
+
+                & fieldset {
                     display: flex;
                     flex-direction: column;
                     padding: 0.4em;
-                    & legend{
+
+                    & legend {
                         padding: 0 0.3em;
                         font-size: 1rem;
                     }
-                    & input{
+
+                    & input {
                         padding: 0.6em;
                         font-size: 1.3rem;
                         margin: 0.3rem 0;
                     }
-                    & textarea{
+
+                    & textarea {
                         margin: 0.3rem 0;
                         padding: 0.6em;
                     }
-                    & p{
+
+                    & p {
                         margin: 0.45em 0;
                     }
-                    & .optionsForAnswer{
+
+                    & .optionsForAnswer {
                         display: flex;
                         justify-content: start;
-                        & label:last-child{
+
+                        & label:last-child {
                             margin-left: 1em;
                         }
                     }
-                    & .optionsForPhone{
+
+                    & .optionsForPhone {
                         margin-top: 0.45em;
                         display: none;
                         justify-content: start;
-                        & label:last-child{
+
+                        & label:last-child {
                             margin-left: 1em;
                         }
-                        &.visible{
+
+                        &.visible {
                             display: flex;
                         }
                     }
-                    & #phoneNumber{
+
+                    & #phoneNumber {
                         display: none;
-                        &.visible{
+
+                        &.visible {
                             display: block;
                         }
                     }
-                    & #emailAddress{
+
+                    & #emailAddress {
                         display: none;
-                        &.visible{
+
+                        &.visible {
                             display: block;
                         }
                     }
-                    & .buttons{
+
+                    & .buttons {
                         margin-top: 0.5em;
                         justify-content: center;
                         margin-bottom: 0.3em;
                         display: none;
-                        &.visible{
+
+                        &.visible {
                             display: flex;
                         }
-                        & button{
+
+                        & button {
                             cursor: pointer;
                             padding: 9px;
                             font-size: 1.6rem;
@@ -760,3 +928,90 @@
         }
     }
 }
+
+
+.dates {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: start;
+    overflow-x: auto;
+    padding: 0 1em;
+
+    & .date {
+        background: #eaa76c;
+        height: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.4em 0.4em 0.4em 1em;
+        flex-shrink: 0;
+        border-radius: 1em;
+
+        & .time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        & .bottom {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+
+            & .discount-item {
+                color: #5f4e40;
+            }
+
+            & .price-item {
+                color: #5f4e40;
+            }
+        }
+
+        &:hover .remove {
+            max-width: 2em;
+            overflow: visible;
+        }
+    }
+
+    & .remove {
+        cursor: pointer;
+        font-size: 0.8rem;
+        display: grid;
+        place-content: center;
+        background: white;
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        margin-left: 0.5em;
+        max-width: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease-in-out;
+
+        & i {
+            margin: 12px;
+        }
+
+        &:hover {
+            color: rgb(102, 102, 102);
+
+        }
+    }
+
+}
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    & .checkout{
+        cursor: pointer;
+        padding: 0.5em 1em;
+        background: rgb(181, 187, 104);
+        color: #313131;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        border: none;
+    }
+  }
